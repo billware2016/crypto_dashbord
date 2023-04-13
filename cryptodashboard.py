@@ -10,7 +10,6 @@ Original file is located at
 import yfinance as yf
 import streamlit as st
 from PIL import Image
-from urllib.request import  urlopen
 
 st.title("Cryptocurrency Daily Prices")
 st.header("Main Dashboard")
@@ -37,29 +36,20 @@ XRP = yf.download(Ripple,period='2h',interval='1m')
 BCH = yf.download(BitcoinCash,period='2h',interval='1m')
 
 st.write("BITCOIN ($)")
-imageBTC=Image.open(urlopen('https://s2.coinmarketcap.com/static/img/coins/64x64/1.png'))
-#Display image
-st.image(imageBTC)
 #Display a table
 st.table(BTC)
 #Display a chart
 st.bar_chart(BTCHis.Close)
 
 st.write("ETHEREUM ($)")
-imageETH=Image.open(urlopen('https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'))
-st.image(imageETH)
 st.table(ETH)
 st.bar_chart(ETHHis.Close)
 
 st.write("RIPPLE ($)")
-imageXRP=Image.open(urlopen('https://s2.coinmarketcap.com/static/img/coins/64x64/52.png'))
-st.image(imageXRP)
 st.table(XRP)
 st.bar_chart(XRPHis.Close)
 
 st.write("BITCOINCASH ($)")
-imageBCH=Image.open(urlopen('https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png'))
-st.image(imageBCH)
 st.table(BCH)
 st.bar_chart(BCHHis.Close)
 
