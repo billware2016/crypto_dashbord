@@ -9,7 +9,6 @@ Original file is located at
 
 import yfinance as yf
 import streamlit as st
-from PIL import Image
 
 st.title("Cryptocurrency Daily Prices")
 st.header("Main Dashboard")
