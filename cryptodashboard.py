@@ -9,7 +9,7 @@ Original file is located at
 
 import yfinance as yf
 import streamlit as st
-
+st.set_page_config(page_title='Crypto Dashbord',page_icon=":chart_with_upwards_trend:")
 st.title("Cryptocurrency Daily Prices")
 st.header("Main Dashboard")
 
